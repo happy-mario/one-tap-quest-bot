@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import pyautogui
 
-def find_and_click_color(target_color, tolerance= 17, interval=1, click_delay=9):
+def find_and_click_color(target_color, tolerance= 17, interval=1, click_delay=110):
     # Set the path to your chromedriver executable
     chromedriver_path = '/Users/mariotedeschi/Downloads/chromedriver-mac-arm64 3/chromedriver'
     
@@ -75,7 +75,7 @@ def find_and_click_color(target_color, tolerance= 17, interval=1, click_delay=9)
 # Example usage
 target_color = (127, 73, 9)  # RGB value of the new target color
 interval = 1  # Set the interval to 1 second
-click_delay = 9  # Set the click delay to 9 seconds
+click_delay = 110  # Set the click delay to 110 seconds
 find_and_click_color(target_color, interval=interval, click_delay=click_delay)
 
 
