@@ -1,0 +1,4 @@
+These are the two things you will need to import in your terminal before you begin:
+selenium: pip install selenium
+pyautogui: pip install pyauto gui 
+visit the respective documentation for each to learn more about them. 
