@@ -12,11 +12,11 @@ import pyautogui
 
 def find_and_click_color(target_color, tolerance= 17, interval=1, click_delay=110):
     # Set the path to your chromedriver executable
-    chromedriver_path = '/Users/mariotedeschi/Downloads/chromedriver-mac-arm64 3/chromedriver'
+    chromedriver_path = 'Your path to chromedriver'
     
     # Configure ChromeOptions with the executable_path
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.binary_location = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    chrome_options.binary_location = "your path to chromedriver's binary location. Mine was:/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
     chrome_options.add_argument(f"chromedriver_path={chromedriver_path}")
     
     # Initialize the Chrome WebDriver with ChromeOptions
@@ -29,8 +29,8 @@ def find_and_click_color(target_color, tolerance= 17, interval=1, click_delay=11
     while True:
         
         # Search for the target color in the captured screen
-        screen = pyautogui.screenshot(region=(0, 365, 655, 540))
-        screen.save('/Users/mariotedeschi/Desktop/dumb_screen_shot/slimy_goober.png')
+        screen = pyautogui.screenshot(region=(0, 365, 655, 540)) #you may have to change this based on your computer monitor's dimentions.
+        screen.save('file where you want this to be saved')
         screen_width, screen_height = screen.size
 
         print("Screenshot taken")
@@ -39,7 +39,7 @@ def find_and_click_color(target_color, tolerance= 17, interval=1, click_delay=11
         click_made = False
 
         for x in range(screen_width):
-            for y in range(screen_height):  # Limit y value to 830
+            for y in range(screen_height):
                 pixel_color = screen.getpixel((x, y))
 
                 # Check if the pixel color matches the target color with increased tolerance
